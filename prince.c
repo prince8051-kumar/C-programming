@@ -1,20 +1,11 @@
-# include <stdio.h>
-int main () {
-//for loop
-for(int i=1; i<=200; i++) {
-printf("%d\n", i);
-}
-//while loop
-int i=1;
-while(i<=100) {
-printf("%d\n", i);
-i++;
-}
-//do while loop
-i = 1;
-do {
-printf("%d\n", i);
-i++;
-} while(i<=100);
-return 0;
+#include <stdio.h>
+
+int main() {
+    int n = 7;
+
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
 }
