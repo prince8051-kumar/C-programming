@@ -8,6 +8,10 @@ int main() {
         i++;
     }
     printf("\n");
-
+  do {
+        printf("%d ", i);
+        i++;
+    } while (i <= 5);
+    printf("\n");
     return 0;
 }
