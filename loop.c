@@ -1,13 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int n = 5, sumSquares = 0;
+    int n = 10;
 
-    for (int i = 1; i <= n; i++) {
-        sumSquares += i * i;
+    printf("while loop: ");
+    while (n < 5) {
+        printf("%d ", n);
     }
+    printf("(nothing printed)\n");
 
-    printf("Sum of squares up to %d: %d\n", n, sumSquares);
+    printf("do-while loop: ");
+    do {
+        printf("%d ", n);
+    } while (n < 5);
+    printf("\n");
 
     return 0;
 }
