@@ -1,19 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int n = 10;
+    int num, sum = 0;
 
-    printf("while loop: ");
-    while (n < 5) {
-        printf("%d ", n);
+    printf("Enter numbers to sum (-1 to stop): ");
+    scanf("%d", &num);
+
+    while (num != -1) {
+        sum += num;
+        scanf("%d", &num);
     }
-    printf("(nothing printed)\n");
 
-    printf("do-while loop: ");
-    do {
-        printf("%d ", n);
-    } while (n < 5);
-    printf("\n");
+    printf("Total: %d\n", sum);
 
     return 0;
 }
