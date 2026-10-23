@@ -6,7 +6,7 @@ for (int attempt = 1; attempt <= 3; attempt++) {
     printf("Attempt %d - enter PIN: ", attempt);
     scanf("%d", &pin);
 
-    if (pin == 1234) {
+    if (pin == 1235) {
         granted = 1;
         break;
     }
