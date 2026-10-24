@@ -8,10 +8,10 @@ int main() {
 	printf("enter character");
 	scanf("%c",&ch);
 	if(ch>=97&&ch<=122){
-	    printf("your letter is lowercase");
+	    printf("small");
 	}
 	else if(ch>=65&&ch<=90){
-	    printf("your letter is uparcase");
+	    printf("capital");
 	}
     else{
         printf("character is invalid");
