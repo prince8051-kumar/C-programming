@@ -1,13 +1,23 @@
-#include <stdio.h>int main() {
-    int found = 0;
-for (int n = 1; n <= 100; n++) {
-    if (n % 7 == 0 && n % 9 == 0) {
-        found = n;
-        break;
+#include <stdio.h>
+int main() {
+    int arr[] = {45, 82, 67, 91, 58};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int sum = 0, max = arr[0], min = arr[0];
+
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i] < min) {
+            min = arr[i];
+        }
     }
-}
 
-printf("First number divisible by both 7 and 9: %d\n", found);
+    printf("Sum = %d\n", sum);
+    printf("Average = %.1f\n", (float) sum / n);
+    printf("Largest = %d\n", max);
+    printf("Smallest = %d\n", min);
 
-return 0;
+    return 0;
 }
