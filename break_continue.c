@@ -1,23 +1,30 @@
 #include <stdio.h>
+
 int main() {
-    int arr[] = {45, 82, 67, 91, 58};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int sum = 0, max = arr[0], min = arr[0];
+    int a[5] = {10, 20, 30, 40, 50};   // every value given
+    int b[5] = {1, 2};                 // the rest become 0
+    int c[] = {7, 8, 9};               // size is worked out: 3
+    int d[5] = {0};                    // all five become 0
 
-    for (int i = 0; i < n; i++) {
-        sum += arr[i];
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-        if (arr[i] < min) {
-            min = arr[i];
-        }
+    int cn = sizeof(c) / sizeof(c[0]); // number of elements in c
+
+    printf("a: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", a[i]);
     }
-
-    printf("Sum = %d\n", sum);
-    printf("Average = %.1f\n", (float) sum / n);
-    printf("Largest = %d\n", max);
-    printf("Smallest = %d\n", min);
+    printf("\nb: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", b[i]);
+    }
+    printf("\nc: ");
+    for (int i = 0; i < cn; i++) {
+        printf("%d ", c[i]);
+    }
+    printf("\nd: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", d[i]);
+    }
+    printf("\n");
 
     return 0;
 }
