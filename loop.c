@@ -1,17 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    int num, sum = 0;
+    float units, total_bill;
 
-    printf("Enter numbers to sum (-1 to stop): ");
-    scanf("%d", &num);
+    // यूजर से खपत की गई यूनिट इनपुट कराना
+    printf("उपभोग की गई बिजली की यूनिट दर्ज करें (Enter total units consumed): ");
+    scanf("%f", &units);
 
-    while (num != -1) {
-        sum += num;
-        scanf("%d", &num);
+    // बिल की गणना करने के लिए कंडीशनल लॉजिक (Slab Rates)
+    if (units <= 100) {
+        // पहले 100 यूनिट के लिए दर: ₹4.50 प्रति यूनिट (उदाहरण के लिए)
+        total_bill = units * 4.50;
+    } 
+    else if (units <= 200) {
+        // अगले 100 यूनिट (101 से 200) के लिए दर: ₹6.00 प्रति यूनिट
+        total_bill = (100 * 4.50) + ((units - 100) * 6.00);
+    } 
+    else {
+        // 200 से अधिक यूनिट होने पर दर: ₹8.00 प्रति यूनिट
+        total_bill = (100 * 4.50) + (100 * 6.00) + ((units - 200) * 8.00);
     }
 
-    printf("Total: %d\n", sum);
+    // कुल बिल की राशि स्क्रीन पर प्रिंट करना
+    printf("\nआपका कुल बिजली बिल = ₹%.2f\n", total_bill);
 
     return 0;
 }
