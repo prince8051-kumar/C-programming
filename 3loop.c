@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {4, 8, 15, 16, 23, 42};
+    int arr[] = {7, 9, 90, 16, 23, 42};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     printf("Number of elements: %d\n", n);
