@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int i = 5;
+    int i = 6;
 
-    while (i <= 8) {
+    while (i <= 10) {
         printf("%d ", i);
         i++;
     }
@@ -11,7 +11,7 @@ int main() {
   do {
         printf("%d ", i);
         i++;
-    } while (i <= 8);
+    } while (i <= 10);
     printf("\n");
     return 0;
 }

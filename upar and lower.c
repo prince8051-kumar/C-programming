@@ -7,7 +7,7 @@ int main() {
 	char ch;
 	printf("enter character");
 	scanf("%c",&ch);
-	if(ch>=97&&ch<=122){
+	if(ch>=97&&ch<=120){
 	    printf("small");
 	}
 	else if(ch>=65&&ch<=90){
