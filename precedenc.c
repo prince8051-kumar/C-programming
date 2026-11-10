@@ -28,7 +28,7 @@ int main() {
 
     printf("e:\n");
     for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j < 2; j++) {
             printf("%d ", e[i][j]);
         }
         printf("\n");
@@ -45,8 +45,8 @@ int main() {
 int wrong = a + b + c / 3;
 int right = (a + b + c) / 3;
 
-printf("wrong average = %d\n", wrong);
-printf("right average = %d\n", right);
+printf("wrong average = %d\n", Wrong);
+printf("right average = %d\n", Right);
 return 0;
 }
 >>>>>>> 7ebe3092bf9e7b59435b2f5bf0b1d44e2a706c26
