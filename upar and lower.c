@@ -11,7 +11,7 @@ int main() {
 	    printf("small");
 	}
 	else if(ch>=65&&ch<=90){
-	    printf("capital");
+	    printf("CAPITAL");
 	}
     else{
         printf("character is invalid");
