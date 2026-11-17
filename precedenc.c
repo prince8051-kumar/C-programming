@@ -4,7 +4,7 @@
 int main() {
     int a[2][3] = {{8, 9, 6}, {4, 5, 5}};             // one { } per row
     int b[2][3] = {, 3, 3, 4, 4, 6};                 // filled row by row
-    int c[][3] = {{7, 2, 2}, {10, 91, 12}, {13, 14, 15}};  // rows counted for us
+    int c[][3] = {{7, 2, 2}, {10, 1, 12}, {13, 14, 15}};  // rows counted for us
     int d[2][3] = {{1}, {7, 5}};                      // missing values become 0
     int e[2][3] = {0};                                // everything becomes 0
 
@@ -41,7 +41,7 @@ int main() {
 }
 =======
 #include <stdio.h>int main() {
-    int a = 58, b = 90, c = 960;
+    int a = 5, b = 90, c = 9;
 int wrong = a + b + c / 3;
 int right = (a + b + c) / 3;
 
