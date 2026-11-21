@@ -1,15 +1,73 @@
 #include <stdio.h>
 
 int main() {
-    int a[3][3] = {45,56,78}, {56,52,54}, {1,58,58}};
+    int arr[10];
+    int n = 0;
+    int choice, pos, value;
 
-    printf("First = %d, Centre = %d, Last = %d\n", a[0][0], a[1][1], a[2][2]);
+    do {
+        printf("\n1. Insert  2. Delete  3. Display  4. Exit\n");
+        printf("Enter choice: ");
+        scanf("%d", &choice);
 
-    a[1][2] = 60;
-    printf("After change: a[1][2] = %d\n", a[1][2]);
+        switch (choice) {
+            case 1:
+                if (n == 10) {
+                    printf("Array is full.\n");
+                    break;
+                }
+                printf("Enter position (0 to %d) and value: ", n);
+                scanf("%d %d", &pos, &value);
+                if (pos < 0 || pos > n) {
+                    printf("Invalid position.\n");
+                    break;
+                }
+                for (int i = n - 1; i >= pos; i--) {
+                    arr[i + 1] = arr[i];
+                }
+                arr[pos] = value;
+                n++;
+                printf("Inserted %d at position %d.\n", value, pos);
+                break;
 
-    a[0][0] = a[0][0] + a[2][2];
-    printf("a[0][0] is now %d\n", a[0][0]);
+            case 2:
+                if (n == 0) {
+                    printf("Array is empty.\n");
+                    break;
+                }
+                printf("Enter position to delete (0 to %d): ", n - 1);
+                scanf("%d", &pos);
+                if (pos < 0 || pos >= n) {
+                    printf("Invalid position.\n");
+                    break;
+                }
+                printf("Deleted %d.\n", arr[pos]);
+                for (int i = pos; i < n - 1; i++) {
+                    arr[i] = arr[i + 1];
+                }
+                n--;
+                break;
+
+            case 3:
+                if (n == 0) {
+                    printf("Array is empty.\n");
+                } else {
+                    printf("Array: ");
+                    for (int i = 0; i < n; i++) {
+                        printf("%d ", arr[i]);
+                    }
+                    printf("\n");
+                }
+                break;
+
+            case 4:
+                printf("Goodbye!\n");
+                break;
+
+            default:
+                printf("Invalid choice.\n");
+        }
+    } while (choice != 4);
 
     return 0;
 }
