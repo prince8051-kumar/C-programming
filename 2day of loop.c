@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int i = 10;
-
-    while (i <= 10) {
-        printf("%d ", i);
-        i++;
+    int a,b;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    for (int i=0; i<a; i++){
+        for(int j=0; j<=b; j++){
+            printf("%d",j);
+            if(j<b){
+                printf(" ");
+            }
+        }
+    printf("\n");
     }
-    printf("\n");
-  do {
-        printf("%d ", i);
-        i++;
-    } while (i <= 10);
-    printf("\n");
     return 0;
 }
