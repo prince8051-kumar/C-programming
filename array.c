@@ -6,7 +6,7 @@ int main() {
     int choice, pos, value;
 
     do {
-        printf("\n1. Insert  2. Delete  3. Display  4. Exit\n");
+        printf("\n1. Insert  2. clear  3. Display  4. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
 
