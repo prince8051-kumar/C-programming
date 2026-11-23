@@ -1,21 +1,30 @@
-// Online C compiler (editor)
-// Write and run C online using this editor.
 
 #include <stdio.h>
 
 int main() {
-	char ch;
-	printf("enter character");
-	scanf("%c",&ch);
-	if(ch>=97&&ch<=120){
-	    printf("small");
-	}
-	else if(ch>=65&&ch<=90){
-	    printf("CAPITAL");
-	}
-    else{
-        printf("character is invalid");
-    }
-	return 0;
+    int n;
 
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Not an Ugly Number");
+        return 0;
+    }
+
+    while (n % 2 == 0)
+        n = n / 2;
+
+    while (n % 3 == 0)
+        n = n / 3;
+
+    while (n % 5 == 0)
+        n = n / 5;
+
+    if (n == 1)
+        printf("Ugly Number");
+    else
+        printf("Not an Ugly Number");
+
+    return 0;
 }
