@@ -1,28 +1,41 @@
 #include <stdio.h>
 
 int main() {
-    float units, total_bill;
+    int A[10][10], B[10][10], C[10][10];
+    int r1, c1, r2, c2;
 
-    // यूजर से खपत की गई यूनिट इनपुट कराना
-    printf("उपभोग की गई बिजली की यूनिट दर्ज करें (Enter total units consumed): ");
-    scanf("%f", &units);
+    printf("Enter rows and columns of A: ");
+    scanf("%d %d", &r1, &c1);
+    printf("Enter rows and columns of B: ");
+    scanf("%d %d", &r2, &c2);
 
-    // बिल की गणना करने के लिए कंडीशनल लॉजिक (Slab Rates)
-    if (units <= 200) {
-        // पहले 100 यूनिट के लिए दर: ₹4.50 प्रति यूनिट (उदाहरण के लिए)
-        total_bill = units * 4.50;
-    } 
-    else if (units <= 500) {
-        // अगले 100 यूनिट (101 से 200) के लिए दर: ₹6.00 प्रति यूनिट
-        total_bill = (200 * 4.50) + ((units - 100) * 6.00);
-    } 
-    else {
-        // 200 से अधिक यूनिट होने पर दर: ₹8.00 प्रति यूनिट
-        total_bill = (100 * 4.50) + (100 * 6.00) + ((units - 200) * 8.00);
+    if (c1 != r2) {
+        printf("Multiplication is not possible: columns of A (%d) != rows of B (%d).\n", c1, r2);
+        return 0;
     }
 
-    // कुल बिल की राशि स्क्रीन पर प्रिंट करना
-    printf("\nआपका कुल बिजली बिल = ₹%.2f\n", total_bill);
+    for (int i = 0; i < r1; i++) {
+        printf("Enter row %d of A: ", i + 1);
+        for (int j = 0; j < c1; j++) scanf("%d", &A[i][j]);
+    }
+    for (int i = 0; i < r2; i++) {
+        printf("Enter row %d of B: ", i + 1);
+        for (int j = 0; j < c2; j++) scanf("%d", &B[i][j]);
+    }
 
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            C[i][j] = 0;
+            for (int k = 0; k < c1; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    printf("\nA x B (%d x %d):\n", r1, c2);
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) printf("%6d", C[i][j]);
+        printf("\n");
+    }
     return 0;
 }
