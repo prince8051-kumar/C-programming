@@ -1,11 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int n = 340;
+    int height,base;
+    float area;
+    scanf("%d",&height);
+    scanf("%d",&base);
+    area=(base*height)/2.0;
+    printf("%.2f",area);
 
-    for (int i = 1; i <= 10; i++) {
-        printf("%d x %d = %d\n", n, i, n * i);
-    }
+
+   
 
     return 0;
 }
