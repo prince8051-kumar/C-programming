@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 #include <stdio.h>
 
 int main() {
     int a[2][3] = {{8,5,9}, {6,6,6};             // one { } per row
     int b[2][3] = {, 3, 3, 4, 4, 6};                 // filled row by row
-    int c[][3] = {{7, 2, 2}, {10, 1, 12}, {13, 14, 15}};  // rows counted for us
+    int c[][3] = {{7, 2, 2}, {6,32,25}, {13, 15, 15}};  // rows counted for us
     int d[2][3] = {{1}, {7, 5}};                      // missing values become 0
     int e[2][3] = {0};                                // everything becomes 0
 
@@ -39,7 +38,6 @@ int main() {
 
     return 0;
 }
-=======
 #include <stdio.h>int main() {
     int a = 5, b = 90, c = 9;
 int wrong = a + b + c / 3;
@@ -49,4 +47,3 @@ printf("wrong average = %d\n", Wrong);
 printf("right average = %d\n", Right);
 return 0;
 }
->>>>>>> 7ebe3092bf9e7b59435b2f5bf0b1d44e2a706c26
