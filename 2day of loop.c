@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int a,b;
-    scanf("%d",&a);
-    scanf("%d",&b);
-    for (int i=0; i<a; i++){
-        for(int j=0; j<=b; j++){
+    int c,m;
+    scanf("%d",&c);
+    scanf("%d",&m);
+    for (int i=0; i<c; i++){
+        for(int j=0; j<=m; j++){
             printf("%d",j);
-            if(j<b){
+            if(j<m){
                 printf(" ");
             }
         }
