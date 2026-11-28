@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int A[10][10], B[10][10], C[10][10];
+    int A[11][10], B[10][10], C[10][10];
     int r1, c1, r2, c2;
 
     printf("Enter rows and columns of A: ");
